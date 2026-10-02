@@ -1,0 +1,13 @@
+{
+  "androidAppId": "ca-app-pub-3940256099942544~3347511713",
+  "androidBannerId": "ca-app-pub-3940256099942544/6300978111",
+  "androidInterstitialId": "ca-app-pub-3940256099942544/1033173712",
+  "androidRewardedId": "ca-app-pub-3940256099942544/5224354917",
+  "removeAdsProductId": "remove_ads",
+  "COMPANY_NAME": "Kitefern Studio",
+  "SUPPORT_EMAIL": "kitefernstudio@gmail.com",
+  "UMP_DEBUG_ENABLED": true,
+  "UMP_TEST_DEVICE_ID": "E900BF38B439857DDD579B0137E31F3C",
+  "testAds": true,
+  "reservedBannerHeight": 64
+}

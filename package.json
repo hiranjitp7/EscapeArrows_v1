@@ -1,0 +1,29 @@
+{
+  "name": "escape-arrows",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A neon arrow puzzle game about finding the escape path.",
+  "scripts": {
+    "start": "npx --yes http-server . -p 8080 -c-1",
+    "check": "node scripts/check-inline-js.js",
+    "build": "node scripts/build-web.js",
+    "postinstall": "patch-package",
+    "android:sync": "npm run build && npx cap sync android",
+    "android:open": "npx cap open android"
+  },
+  "dependencies": {
+    "@capacitor-community/admob": "^8.1.0",
+    "@capacitor/android": "^8.5.2",
+    "@capacitor/browser": "^8.0.4",
+    "@capacitor/core": "^8.5.2",
+    "@capacitor/haptics": "^8.0.2",
+    "@capacitor/preferences": "^8.0.1",
+    "@capgo/native-purchases": "^8.8.1",
+    "phaser": "^3.80.1"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^8.5.2",
+    "esbuild": "^0.28.2",
+    "patch-package": "^8.0.1"
+  }
+}

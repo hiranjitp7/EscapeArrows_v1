@@ -1,0 +1,13 @@
+{
+  "appId": "com.arrowpathpuzzle.game",
+  "appName": "Escape Arrows!",
+  "webDir": "www",
+  "plugins": {
+    "SystemBars": {
+      "style": "DARK",
+      "hidden": false,
+      "insetsHandling": "css",
+      "initialViewportFitValueHint": "cover"
+    }
+  }
+}
