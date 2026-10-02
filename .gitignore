@@ -5,6 +5,7 @@ node_modules/
 **/.kotlin/
 **/.idea/
 **/local.properties
+android/key.properties
 *.bak.properties
 android/app/src/main/assets/public/
 android/app/src/main/assets/capacitor.config.json
