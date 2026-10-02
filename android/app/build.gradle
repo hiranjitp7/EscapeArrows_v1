@@ -31,8 +31,8 @@ android {
         applicationId "com.arrowpathpuzzle.game"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 4
-        versionName "1.0.3"
+        versionCode 5
+        versionName "1.1.0"
         manifestPlaceholders = [ADMOB_APP_ID: adConfig.androidAppId]
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {

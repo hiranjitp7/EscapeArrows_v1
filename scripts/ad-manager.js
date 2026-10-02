@@ -168,8 +168,7 @@ export function createAdManager({
     try{
       const transaction=await NativePurchases.purchaseProduct({productIdentifier:config.removeAdsProductId,productType:PURCHASE_TYPE.INAPP,quantity:1});
       const purchased=transaction.productIdentifier===config.removeAdsProductId&&
-        (transaction.purchaseState===undefined||transaction.purchaseState==='1'||transaction.purchaseState==='PURCHASED')&&
-        transaction.isAcknowledged!==false;
+        (transaction.purchaseState===undefined||transaction.purchaseState==='1'||transaction.purchaseState==='PURCHASED');
       if(!purchased)return false;
       state.removeAds=true;save();notify();await removeBanner();return true;
     }catch{return false;}
