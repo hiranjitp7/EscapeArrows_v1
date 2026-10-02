@@ -42,7 +42,7 @@ export function createAdManager({
   const subscribe=listener=>{listeners.add(listener);listener(getStatus());return()=>listeners.delete(listener);};
   const onBannerHeightChange=listener=>{bannerHeightListeners.add(listener);listener(bannerHeight);return()=>bannerHeightListeners.delete(listener);};
   const prepareRewarded=()=>{
-    if(!initialized||!isNative()||rewardedReady||rewardedLoading)return rewardedLoading;
+    if(!config.androidRewardedId||!initialized||!isNative()||rewardedReady||rewardedLoading)return rewardedLoading;
     rewardedLoading=AdMob.prepareRewardVideoAd({adId:config.androidRewardedId,isTesting:config.testAds})
       .then(()=>{rewardedReady=true;notify();return true;})
       .catch(()=>{rewardedReady=false;notify();setTimeout(()=>void prepareRewarded(),30000);return false;})
@@ -50,7 +50,7 @@ export function createAdManager({
     return rewardedLoading;
   };
   const prepareInterstitial=()=>{
-    if(!initialized||!isNative()||state.removeAds||interstitialReady||interstitialLoading)return interstitialLoading;
+    if(!config.androidInterstitialId||!initialized||!isNative()||state.removeAds||interstitialReady||interstitialLoading)return interstitialLoading;
     interstitialLoading=AdMob.prepareInterstitial({adId:config.androidInterstitialId,isTesting:config.testAds})
       .then(()=>{interstitialReady=true;notify();return true;})
       .catch(()=>{interstitialReady=false;notify();setTimeout(()=>void prepareInterstitial(),30000);return false;})
@@ -96,7 +96,7 @@ export function createAdManager({
     if(!isNative())return Promise.resolve(false);
     initializing=(async()=>{
       try{
-        const consentDebug=config.UMP_DEBUG_ENABLED&&config.isDebugBuild?{
+        const consentDebug=config.UMP_DEBUG_ENABLED===true&&config.isDebugBuild===true?{
           debugGeography:AdmobConsentDebugGeography.EEA,
           testDeviceIdentifiers:[config.UMP_TEST_DEVICE_ID],
         }:undefined;

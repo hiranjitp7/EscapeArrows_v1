@@ -1,11 +1,16 @@
 apply plugin: 'com.android.application'
 
 def adConfig = new groovy.json.JsonSlurper().parse(file('../../scripts/ad-config.json'))
+def signingPropertiesFile = new File(System.getProperty('user.home'), '.android/escape-arrows-upload.properties')
+def signingProperties = new Properties()
+if (signingPropertiesFile.isFile()) {
+    signingPropertiesFile.withInputStream { signingProperties.load(it) }
+}
 def releaseSigning = [
-    storeFile: System.getenv('ANDROID_KEYSTORE_PATH'),
-    storePassword: System.getenv('ANDROID_KEYSTORE_PASSWORD'),
-    keyAlias: System.getenv('ANDROID_KEY_ALIAS'),
-    keyPassword: System.getenv('ANDROID_KEY_PASSWORD')
+    storeFile: System.getenv('ANDROID_KEYSTORE_PATH') ?: signingProperties.getProperty('storeFile'),
+    storePassword: System.getenv('ANDROID_KEYSTORE_PASSWORD') ?: signingProperties.getProperty('storePassword'),
+    keyAlias: System.getenv('ANDROID_KEY_ALIAS') ?: signingProperties.getProperty('keyAlias'),
+    keyPassword: System.getenv('ANDROID_KEY_PASSWORD') ?: signingProperties.getProperty('keyPassword')
 ]
 def hasReleaseSigning = releaseSigning.values().every { it }
 
@@ -26,8 +31,8 @@ android {
         applicationId "com.arrowpathpuzzle.game"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 2
-        versionName "1.0.1"
+        versionCode 4
+        versionName "1.0.3"
         manifestPlaceholders = [ADMOB_APP_ID: adConfig.androidAppId]
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         aaptOptions {
