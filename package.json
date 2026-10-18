@@ -6,6 +6,7 @@
   "scripts": {
     "start": "npx --yes http-server . -p 8080 -c-1",
     "check": "node scripts/check-inline-js.js",
+    "test": "node --test scripts/*.test.js",
     "build": "node scripts/build-web.js",
     "postinstall": "patch-package",
     "android:sync": "npm run build && npx cap sync android",
