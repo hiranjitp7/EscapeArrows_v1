@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="941" height="1672" viewBox="0 0 941 1672">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#08051b"/><stop offset=".5" stop-color="#1c0c36"/><stop offset="1" stop-color="#09051b"/></linearGradient>
+    <radialGradient id="halo" cx="50%" cy="50%" r="60%"><stop stop-color="#25205d" stop-opacity=".8"/><stop offset=".55" stop-color="#1d103d" stop-opacity=".32"/><stop offset="1" stop-color="#0a061c" stop-opacity="0"/></radialGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#81ffff"/><stop offset=".45" stop-color="#00e5f6"/><stop offset="1" stop-color="#1595ff"/></linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff76e5"/><stop offset=".55" stop-color="#fb25b8"/><stop offset="1" stop-color="#9f3cff"/></linearGradient>
+    <linearGradient id="green" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#a6ff93"/><stop offset=".5" stop-color="#43f0a1"/><stop offset="1" stop-color="#00c8c9"/></linearGradient>
+    <filter id="cyanGlow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="21" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="pinkGlow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="22" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="greenGlow" x="-70%" y="-70%" width="240%" height="240%"><feGaussianBlur stdDeviation="17" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="dots" width="44" height="44" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#bd83e8" opacity=".17"/></pattern>
+  </defs>
+  <rect width="941" height="1672" fill="url(#bg)"/><rect width="941" height="1672" fill="url(#halo)"/><rect width="941" height="1672" fill="url(#dots)" opacity=".32"/>
+
+  <!-- open board -->
+  <g fill="#18132f" stroke="#4d3477" stroke-width="10" opacity=".66">
+    <rect x="100" y="347" width="142" height="142" rx="28"/><rect x="268" y="347" width="142" height="142" rx="28"/><rect x="436" y="347" width="142" height="142" rx="28"/><rect x="604" y="347" width="142" height="142" rx="28"/>
+    <rect x="100" y="515" width="142" height="142" rx="28"/><rect x="268" y="515" width="142" height="142" rx="28"/><rect x="436" y="515" width="142" height="142" rx="28"/><rect x="604" y="515" width="142" height="142" rx="28"/>
+    <rect x="100" y="683" width="142" height="142" rx="28"/><rect x="268" y="683" width="142" height="142" rx="28"/><rect x="436" y="683" width="142" height="142" rx="28"/><rect x="604" y="683" width="142" height="142" rx="28"/>
+    <rect x="100" y="851" width="142" height="142" rx="28"/><rect x="268" y="851" width="142" height="142" rx="28"/><rect x="436" y="851" width="142" height="142" rx="28"/><rect x="604" y="851" width="142" height="142" rx="28"/>
+    <rect x="100" y="1019" width="142" height="142" rx="28"/><rect x="268" y="1019" width="142" height="142" rx="28"/><rect x="436" y="1019" width="142" height="142" rx="28"/><rect x="604" y="1019" width="142" height="142" rx="28"/>
+  </g>
+
+  <!-- green exit path -->
+  <path d="M140 1274H244Q283 1274 283 1235V1165H515Q555 1165 555 1125V1040" fill="none" stroke="#073e68" stroke-width="96" stroke-linecap="round" stroke-linejoin="round" filter="url(#greenGlow)"/>
+  <path d="M140 1274H244Q283 1274 283 1235V1165H515Q555 1165 555 1125V1040" fill="none" stroke="url(#green)" stroke-width="64" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="555,958 486,1063 624,1063" fill="url(#green)" filter="url(#greenGlow)"/>
+
+  <!-- two-tap arrow -->
+  <g filter="url(#cyanGlow)">
+    <path d="M117 715H385Q426 715 426 674V540" fill="none" stroke="#033d75" stroke-width="105" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M117 715H385Q426 715 426 674V540" fill="none" stroke="url(#cyan)" stroke-width="70" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="426,441 352,558 500,558" fill="url(#cyan)"/>
+  </g>
+  <!-- distinctive two-dot ring -->
+  <g filter="url(#pinkGlow)">
+    <circle cx="426" cy="715" r="91" fill="#190d35" fill-opacity=".94" stroke="#ff33c1" stroke-width="15"/>
+    <circle cx="426" cy="715" r="62" fill="none" stroke="#8d2bf4" stroke-width="8" stroke-dasharray="9 16"/>
+    <circle cx="426" cy="654" r="16" fill="#fff1fb"/><circle cx="426" cy="776" r="16" fill="#ff38c4"/>
+  </g>
+  <circle cx="426" cy="715" r="13" fill="#ffe8fb"/>
+
+  <!-- second, waiting arrow -->
+  <g filter="url(#pinkGlow)">
+    <path d="M659 496V588Q659 631 616 631H568" fill="none" stroke="#510b4d" stroke-width="72" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M659 496V588Q659 631 616 631H568" fill="none" stroke="url(#pink)" stroke-width="45" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="502,631 580,580 580,682" fill="url(#pink)"/>
+  </g>
+  <!-- tap pulses -->
+  <g fill="none" stroke-linecap="round" filter="url(#cyanGlow)">
+    <path d="M277 617l-49-37" stroke="#52f8ff" stroke-width="13"/><path d="M259 693h-65" stroke="#52f8ff" stroke-width="13"/><path d="M278 780l-47 39" stroke="#52f8ff" stroke-width="13"/>
+    <path d="M570 788l47 39" stroke="#ff4fd0" stroke-width="13"/><path d="M594 714h67" stroke="#ff4fd0" stroke-width="13"/>
+  </g>
+  <!-- small square hints -->
+  <g filter="url(#pinkGlow)"><rect x="171" y="918" width="18" height="18" rx="4" fill="#ff42c7"/><rect x="730" y="910" width="18" height="18" rx="4" fill="#00e7f4"/><rect x="767" y="951" width="12" height="12" rx="3" fill="#ffca2c"/></g>
+  <g opacity=".85" filter="url(#pinkGlow)"><path d="M292 1340h355" stroke="#ff35c1" stroke-width="7" stroke-linecap="round"/><circle cx="278" cy="1340" r="8" fill="#ff35c1"/><circle cx="662" cy="1340" r="8" fill="#ff35c1"/></g>
+</svg>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="941" height="1672" viewBox="0 0 941 1672">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#09051c"/><stop offset=".48" stop-color="#160b2d"/><stop offset="1" stop-color="#09051b"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="46%" r="57%"><stop offset="0" stop-color="#382064" stop-opacity=".78"/><stop offset=".62" stop-color="#1b0d38" stop-opacity=".25"/><stop offset="1" stop-color="#0b061e" stop-opacity="0"/></radialGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#67fbff"/><stop offset=".48" stop-color="#00dff5"/><stop offset="1" stop-color="#1685ff"/></linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff69df"/><stop offset=".45" stop-color="#ff25a9"/><stop offset="1" stop-color="#a62dff"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff36b"/><stop offset=".5" stop-color="#ffc515"/><stop offset="1" stop-color="#f47b11"/></linearGradient>
+    <filter id="gc" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="18" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="gp" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="20" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="gg" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="17" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="dots" width="42" height="42" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#a779d8" opacity=".18"/></pattern>
+  </defs>
+  <rect width="941" height="1672" fill="url(#bg)"/>
+  <rect width="941" height="1672" fill="url(#halo)"/>
+  <rect width="941" height="1672" fill="url(#dots)" opacity=".34"/>
+
+  <!-- faint puzzle board -->
+  <g fill="#18132f" stroke="#4b3474" stroke-width="10" opacity=".62">
+    <rect x="108" y="352" width="138" height="138" rx="28"/><rect x="269" y="352" width="138" height="138" rx="28"/><rect x="430" y="352" width="138" height="138" rx="28"/><rect x="591" y="352" width="138" height="138" rx="28"/>
+    <rect x="108" y="513" width="138" height="138" rx="28"/><rect x="269" y="513" width="138" height="138" rx="28"/><rect x="430" y="513" width="138" height="138" rx="28"/><rect x="591" y="513" width="138" height="138" rx="28"/>
+    <rect x="108" y="674" width="138" height="138" rx="28"/><rect x="269" y="674" width="138" height="138" rx="28"/><rect x="430" y="674" width="138" height="138" rx="28"/><rect x="591" y="674" width="138" height="138" rx="28"/>
+    <rect x="108" y="835" width="138" height="138" rx="28"/><rect x="269" y="835" width="138" height="138" rx="28"/><rect x="430" y="835" width="138" height="138" rx="28"/><rect x="591" y="835" width="138" height="138" rx="28"/>
+    <rect x="108" y="996" width="138" height="138" rx="28"/><rect x="269" y="996" width="138" height="138" rx="28"/><rect x="430" y="996" width="138" height="138" rx="28"/><rect x="591" y="996" width="138" height="138" rx="28"/>
+  </g>
+
+  <!-- cyan route -->
+  <g fill="none" stroke="#002a67" stroke-width="92" stroke-linecap="round" stroke-linejoin="round" opacity=".9" filter="url(#gc)"><path d="M75 1170H231Q284 1170 284 1117V1045H525Q575 1045 575 995V890"/></g>
+  <path d="M75 1170H231Q284 1170 284 1117V1045H525Q575 1045 575 995V890" fill="none" stroke="url(#cyan)" stroke-width="62" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M75 1170H231Q284 1170 284 1117V1045H525Q575 1045 575 995V890" fill="none" stroke="#a7ffff" stroke-opacity=".42" stroke-width="10" stroke-linecap="round"/>
+  <polygon points="575,818 507,926 643,926" fill="url(#cyan)" filter="url(#gc)"/>
+
+  <!-- highlighted re-aim arrow -->
+  <g filter="url(#gp)">
+    <path d="M350 820V646Q350 601 395 601H590" fill="none" stroke="#5c073f" stroke-width="102" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M350 820V646Q350 601 395 601H590" fill="none" stroke="url(#pink)" stroke-width="68" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="696,601 574,527 574,675" fill="url(#pink)"/>
+  </g>
+  <circle cx="350" cy="820" r="37" fill="#21103f" stroke="#ff49cf" stroke-width="12"/>
+  <circle cx="350" cy="820" r="9" fill="#ffb5f2"/>
+
+  <!-- turn orbit -->
+  <g fill="none" stroke="url(#gold)" stroke-width="19" stroke-linecap="round" filter="url(#gg)">
+    <path d="M270 865C207 791 218 696 286 650"/>
+    <path d="M492 476C565 500 601 574 581 638"/>
+  </g>
+  <polygon points="285,619 285,683 226,653" fill="url(#gold)" filter="url(#gg)"/>
+  <polygon points="589,688 529,651 598,622" fill="url(#gold)" filter="url(#gg)"/>
+  <g fill="#ffe44b" filter="url(#gg)"><circle cx="190" cy="550" r="8"/><circle cx="722" cy="773" r="9"/><circle cx="230" cy="1236" r="7"/></g>
+
+  <!-- small alternate arrows -->
+  <path d="M116 424H185" fill="none" stroke="#6b4c9a" stroke-width="28" stroke-linecap="round"/><polygon points="222,424 178,394 178,454" fill="#7450a8"/>
+  <path d="M645 1144H790" fill="none" stroke="#7553a3" stroke-width="28" stroke-linecap="round"/><polygon points="827,1144 783,1114 783,1174" fill="#8f54d9"/>
+
+  <!-- clean lower accent -->
+  <g opacity=".85" filter="url(#gc)"><path d="M332 1330h278" stroke="#00e4f5" stroke-width="7" stroke-linecap="round"/><circle cx="319" cy="1330" r="8" fill="#00e4f5"/><circle cx="623" cy="1330" r="8" fill="#00e4f5"/></g>
+</svg>

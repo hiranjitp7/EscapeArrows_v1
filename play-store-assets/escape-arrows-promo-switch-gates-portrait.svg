@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="941" height="1672" viewBox="0 0 941 1672">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#09051c"/><stop offset=".5" stop-color="#1a0b31"/><stop offset="1" stop-color="#080419"/></linearGradient>
+    <radialGradient id="halo" cx="50%" cy="46%" r="60%"><stop stop-color="#3e1d59" stop-opacity=".7"/><stop offset=".52" stop-color="#1b123c" stop-opacity=".35"/><stop offset="1" stop-color="#0a061d" stop-opacity="0"/></radialGradient>
+    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#70ffff"/><stop offset=".48" stop-color="#00e4f2"/><stop offset="1" stop-color="#1288ff"/></linearGradient>
+    <linearGradient id="pink" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff78e7"/><stop offset=".5" stop-color="#ff269e"/><stop offset="1" stop-color="#a936ff"/></linearGradient>
+    <linearGradient id="yellow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff276"/><stop offset=".5" stop-color="#ffc51b"/><stop offset="1" stop-color="#f27c13"/></linearGradient>
+    <linearGradient id="mint" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a8ffb0"/><stop offset=".5" stop-color="#43ef9e"/><stop offset="1" stop-color="#04bfc7"/></linearGradient>
+    <filter id="cGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="18" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="pGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="20" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <filter id="yGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="16" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+    <pattern id="dots" width="43" height="43" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.4" fill="#b77be2" opacity=".18"/></pattern>
+  </defs>
+  <rect width="941" height="1672" fill="url(#bg)"/><rect width="941" height="1672" fill="url(#halo)"/><rect width="941" height="1672" fill="url(#dots)" opacity=".32"/>
+
+  <!-- gate puzzle board -->
+  <g fill="#18132f" stroke="#4c3474" stroke-width="10" opacity=".64">
+    <rect x="96" y="354" width="148" height="148" rx="28"/><rect x="271" y="354" width="148" height="148" rx="28"/><rect x="446" y="354" width="148" height="148" rx="28"/><rect x="621" y="354" width="148" height="148" rx="28"/>
+    <rect x="96" y="529" width="148" height="148" rx="28"/><rect x="271" y="529" width="148" height="148" rx="28"/><rect x="446" y="529" width="148" height="148" rx="28"/><rect x="621" y="529" width="148" height="148" rx="28"/>
+    <rect x="96" y="704" width="148" height="148" rx="28"/><rect x="271" y="704" width="148" height="148" rx="28"/><rect x="446" y="704" width="148" height="148" rx="28"/><rect x="621" y="704" width="148" height="148" rx="28"/>
+    <rect x="96" y="879" width="148" height="148" rx="28"/><rect x="271" y="879" width="148" height="148" rx="28"/><rect x="446" y="879" width="148" height="148" rx="28"/><rect x="621" y="879" width="148" height="148" rx="28"/>
+    <rect x="96" y="1054" width="148" height="148" rx="28"/><rect x="271" y="1054" width="148" height="148" rx="28"/><rect x="446" y="1054" width="148" height="148" rx="28"/><rect x="621" y="1054" width="148" height="148" rx="28"/>
+  </g>
+
+  <!-- cyan switch route -->
+  <g filter="url(#cGlow)"><path d="M74 1192H215Q262 1192 262 1145V1034H450Q493 1034 493 991V892" fill="none" stroke="#003868" stroke-width="100" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path d="M74 1192H215Q262 1192 262 1145V1034H450Q493 1034 493 991V892" fill="none" stroke="url(#cyan)" stroke-width="65" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M74 1192H215Q262 1192 262 1145V1034H450Q493 1034 493 991V892" fill="none" stroke="#b5ffff" stroke-opacity=".45" stroke-width="9" stroke-linecap="round"/>
+  <polygon points="493,807 421,920 565,920" fill="url(#cyan)" filter="url(#cGlow)"/>
+
+  <!-- yellow linked switch -->
+  <g filter="url(#yGlow)">
+    <path d="M132 620H318Q359 620 359 579V497" fill="none" stroke="#6e4100" stroke-width="75" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M132 620H318Q359 620 359 579V497" fill="none" stroke="url(#yellow)" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+    <polygon points="359,416 300,508 418,508" fill="url(#yellow)"/>
+  </g>
+  <!-- switch plate -->
+  <g filter="url(#pGlow)">
+    <rect x="278" y="694" width="112" height="164" rx="27" fill="#231342" stroke="#ff35ba" stroke-width="13"/>
+    <rect x="310" y="728" width="48" height="95" rx="24" fill="#51176e" stroke="#ff8fe8" stroke-width="7"/>
+    <circle cx="334" cy="764" r="13" fill="#fff4fd"/><circle cx="334" cy="803" r="13" fill="#ff31b8"/>
+  </g>
+
+  <!-- locked gate -->
+  <g filter="url(#pGlow)">
+    <rect x="603" y="687" width="150" height="158" rx="26" fill="#78758f" stroke="#bebde0" stroke-width="11"/>
+    <path d="M645 759v-25c0-37 66-37 66 0v25" fill="none" stroke="#201337" stroke-width="15" stroke-linecap="round"/>
+    <rect x="631" y="751" width="78" height="61" rx="12" fill="#201337"/>
+    <circle cx="670" cy="778" r="10" fill="#ffc928"/><path d="M670 785v15" stroke="#ffc928" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <!-- connection beam -->
+  <path d="M390 776C467 776 487 776 603 776" fill="none" stroke="#ff35b9" stroke-width="10" stroke-dasharray="14 20" opacity=".9" filter="url(#pGlow)"/>
+  <g fill="#ff35b9" filter="url(#pGlow)"><circle cx="442" cy="776" r="8"/><circle cx="494" cy="776" r="8"/><circle cx="546" cy="776" r="8"/></g>
+
+  <!-- mint route and gate -->
+  <g filter="url(#cGlow)"><path d="M622 1116H755Q797 1116 797 1074V1010" fill="none" stroke="#123e5a" stroke-width="75" stroke-linecap="round" stroke-linejoin="round"/></g>
+  <path d="M622 1116H755Q797 1116 797 1074V1010" fill="none" stroke="url(#mint)" stroke-width="48" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="797,929 740,1019 854,1019" fill="url(#mint)" filter="url(#cGlow)"/>
+  <g fill="#ffd329" filter="url(#yGlow)"><path d="M524 450l15 35 35 15-35 15-15 35-15-35-35-15 35-15z"/><path d="M786 1266l11 27 27 11-27 11-11 27-11-27-27-11 27-11z"/></g>
+  <g opacity=".88" filter="url(#pGlow)"><path d="M288 1350h370" stroke="#ff35bb" stroke-width="7" stroke-linecap="round"/><circle cx="274" cy="1350" r="8" fill="#ff35bb"/><circle cx="672" cy="1350" r="8" fill="#ff35bb"/></g>
+</svg>
